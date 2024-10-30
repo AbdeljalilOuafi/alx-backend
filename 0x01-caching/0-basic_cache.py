@@ -8,7 +8,6 @@ class BasicCache(BaseCaching):
 
     This class implements a simple caching system.
     """
-    
     def __init__(self):
         """Initialize the BasicCache instance.
 
@@ -42,8 +41,4 @@ class BasicCache(BaseCaching):
         """
         if key is None:
             return None
-        try:
-            value = self.cache_data[key]
-            return value
-        except KeyError:
-            return None
+        return self.cache_data.get(key)
