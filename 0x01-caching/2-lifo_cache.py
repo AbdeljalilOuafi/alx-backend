@@ -36,7 +36,6 @@ class LIFOCache(BaseCaching):
 
         else:
             if len(self.cache_data) >= LIFOCache.MAX_ITEMS:
-                print(self.order)
                 lastin = self.order[-1]
                 del self.cache_data[lastin]
                 print("DISCARD: {}".format(lastin))
